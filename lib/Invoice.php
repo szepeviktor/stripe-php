@@ -154,7 +154,7 @@ class Invoice extends ApiResource
      * @param null|array $params
      * @param null|array|string $opts
      *
-     * @throws StripeExceptionApiErrorException if the request fails
+     * @throws \Stripe\Exception\ApiErrorException if the request fails
      *
      * @return \Stripe\Collection<\Stripe\InvoiceLineItem> the list of lines (InvoiceLineItem)
      */
