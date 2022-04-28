@@ -194,24 +194,37 @@ class StripeObject implements \ArrayAccess, \Countable, \JsonSerializable
     }
 
     // ArrayAccess methods
+
+    /**
+     * @return void
+     */
     #[\ReturnTypeWillChange]
     public function offsetSet($k, $v)
     {
         $this->{$k} = $v;
     }
 
+    /**
+     * @return bool
+     */
     #[\ReturnTypeWillChange]
     public function offsetExists($k)
     {
         return \array_key_exists($k, $this->_values);
     }
 
+    /**
+     * @return void
+     */
     #[\ReturnTypeWillChange]
     public function offsetUnset($k)
     {
         unset($this->{$k});
     }
 
+    /**
+     * @return mixed
+     */
     #[\ReturnTypeWillChange]
     public function offsetGet($k)
     {
